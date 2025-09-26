@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class OpenWeatherService {
-  apiKey = '1f9ae389adee1bc8d10104f9a22449fb';
+  apiKey = '5122229d2c94353906c55abef5a61d41';
   apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
   constructor() { }
   buscarInfoClimaCidadeAtual() {
