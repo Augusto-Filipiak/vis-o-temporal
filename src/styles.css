@@ -1,0 +1,242 @@
+body {
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0ffe7 60%, #fffbe0 100%);
+  min-height: 100vh;
+  color: #1a2e05;
+  padding: 24px;
+}
+
+.app {
+  max-width: 680px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.7);
+  border-radius: 40px;
+  box-shadow: 0 12px 40px rgba(34,197,94,0.15), 0 1.5px 8px #fbbf24;
+  padding: 48px 36px;
+  border: 2.5px solid #bbf7d0;
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #22c55e;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 12px #bbf7d0;
+}
+
+.search-bar input {
+  background: #f0fdf4;
+  color: #1a2e05;
+  border: 2px solid #bbf7d0;
+  border-radius: 18px;
+  font-size: 1.05rem;
+  padding: 14px 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #bbf7d0;
+}
+
+.search-bar input:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 2px 8px #fbbf24;
+}
+
+.search-bar button {
+  background: linear-gradient(90deg, #fbbf24 60%, #22c55e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 14px 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #bbf7d0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.search-bar button:hover {
+  background: linear-gradient(90deg, #22c55e 60%, #fbbf24 100%);
+  transform: scale(1.07);
+}
+
+.weather-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 28px;
+  padding: 32px;
+  text-align: center;
+  border: 2px solid #bbf7d0;
+  box-shadow: 0 6px 24px #bbf7d0;
+  position: relative;
+  backdrop-filter: blur(4px);
+}
+
+.weather-card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #bbf7d0, #fbbf24);
+  border-radius: 6px 6px 0 0;
+}
+
+.weather-card h2 {
+  font-size: 1.6rem;
+  color: #1a2e05;
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+
+.weather-info img {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 12px #bbf7d0);
+}
+
+.temperature {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #fbbf24;
+  margin: 10px 0;
+  text-shadow: 0 2px 8px #bbf7d0;
+}
+
+.description {
+  font-size: 1.15rem;
+  color: #22c55e;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.weather-icon-large {
+  font-size: 3.7rem;
+  margin: 12px 0;
+  color: #22c55e;
+  animation: float 2.5s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.weather-details {
+  background: #f0fdf4;
+  padding: 20px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  border: 1.5px solid #bbf7d0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #fffbe0;
+  border-radius: 16px;
+  border: 1.5px solid #fbbf24;
+  transition: box-shadow 0.2s;
+}
+
+.detail-item:hover {
+  box-shadow: 0 2px 12px #fbbf24;
+}
+
+.detail-icon {
+  font-size: 1.4rem;
+  color: #fbbf24;
+}
+
+.detail-item span:last-child {
+  color: #1a2e05;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.error, .error-message, .error-weather {
+  color: #dc2626;
+  background: #fef2f2;
+  border-radius: 14px;
+  border: 2px solid #dc2626;
+  padding: 16px;
+  margin: 14px 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  margin-top: 36px;
+  color: #22c55e;
+  font-size: 1.05rem;
+  opacity: 0.8;
+}
+
+.api-help {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f0fdf4;
+  border-radius: 10px;
+  border: 1.5px solid #bbf7d0;
+}
+
+.api-help code {
+  background: #fffbe0;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+  color: #22c55e;
+  border: 1px solid #fbbf24;
+}
+
+.loading, .loading-weather {
+  text-align: center;
+  padding: 28px;
+  color: #22c55e;
+  font-size: 1.1rem;
+}
+
+.loading::after, .loading-spinner {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid #22c55e;
+  border-radius: 50%;
+  border-top-color: #fbbf24;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .app {
+    padding: 16px;
+    margin: 10px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .features-grid,
+  .weather-details,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .search-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-header h1 {
+    font-size: 1.3rem;
+  }
+}

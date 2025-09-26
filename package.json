@@ -1,6 +1,23 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "@angular/core": "^20.3.2",
     "@angular/router": "^20.3.2"
   }
 }
+=======
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-react": "^4.0.3",
+      "vite": "^4.4.5"
+    }
+  }
+>>>>>>> 3bc1bc1b939789d4dd2a2f8df11a6d2c0fe666e9
